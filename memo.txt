@@ -1,3 +1,7 @@
 npm i module-name // install module to dependencies
 npm i --save-dev module-name // install to dev dependencies
 npm i --save-dev module-name@1.19 // install a specific version (1.19 here) of module
+
+npm i typescript --save-dev //install TypeScript
+npx tsc --init //initialize typescript
+npm run build //build project form typescript to JavaScript 
