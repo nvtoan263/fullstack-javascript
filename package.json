@@ -2,7 +2,7 @@
   "scripts": {
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && npm run jasmine"
   },
   "devDependencies": {
     "@types/jasmine": "^4.3.5",
