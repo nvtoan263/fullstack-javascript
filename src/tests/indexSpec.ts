@@ -1,10 +1,30 @@
-import myFunc from '../index';
-import {arr1, arr2} from '../index';
+import  {numArr, wordArr, arrSum, mixArr, myNum, five} from '../index';
 
-it('expect myFunc(5) to equal 25', () => {
-    expect(myFunc(5)).toEqual(25);
-});
+describe("Jasmine sample", () => {
 
-it("expects arr1 to refer to arr2", () => {
-    expect(arr1).toEqual(arr2);
-});
+  
+    it("toBe()", () => {
+      expect(five).toBe(5);
+    });
+  
+    it("toContain()", () => {
+      expect(numArr).toContain(3);
+    });
+  
+    it("toContain()", () => {
+      expect(wordArr).toContain("cat");
+    });
+  
+    it("should be in uppercase", () => {
+      expect(mixArr).toEqual("HELLO, JASMINE!");
+    });
+  
+    it("should not be an empty string", () => {
+      expect(five).toBe(5);
+    });
+
+    it("should not be an empty string", () => {
+        expect(myNum).not.toBe(five);
+      });
+  });
+  

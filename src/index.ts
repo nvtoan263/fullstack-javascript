@@ -15,3 +15,5 @@ console.log(numbers.sum(arrSum, myNum));
 console.log(strings.capitalize('the quick brown fox'));
 console.log(numbers.multiply(five, 8));
 console.log(arrays.lgNum(mixArr));
+
+export {numArr, wordArr, arrSum, mixArr, myNum, five}
