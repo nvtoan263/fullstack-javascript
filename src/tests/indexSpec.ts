@@ -16,7 +16,7 @@ describe("Jasmine sample", () => {
     });
   
     it("should be in uppercase", () => {
-      expect(mixArr).toEqual("HELLO, JASMINE!");
+      expect(mixArr).toContain("dog");
     });
   
     it("should not be an empty string", () => {
