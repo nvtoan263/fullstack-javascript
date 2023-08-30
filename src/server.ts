@@ -1,11 +1,9 @@
 import express from 'express';
+import routes from './routes';
 const app = express();
-const port = 5024;
+const port = 3000;
 
-app.get('/api', (req, res) => { 
-    console.log("[INFO] Someone accessing...!!!");
-    res.send("Hello world!");
-});
+app.use('/api',routes);
 app.get('/user', function(req, res) {
     res.status(200).json({ name: 'john' });
   });
