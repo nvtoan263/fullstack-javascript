@@ -1,0 +1,15 @@
+{
+  "name": "assignment_1_imageprocessingapi",
+  "version": "1.0.0",
+  "description": "assignement 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test",
+    "build": "npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
