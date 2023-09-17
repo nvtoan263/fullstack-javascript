@@ -3,6 +3,9 @@ npm install typescript --save-dev
 configure outdir in tsconfig.json
 mkdir src, dir
 npm install sharp --save-dev
+#install lint
+npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+npx eslint --init
 
 *****
 Created separate module for processing functionality and import to route
