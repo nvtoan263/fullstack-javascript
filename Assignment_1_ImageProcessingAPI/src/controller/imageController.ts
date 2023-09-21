@@ -9,7 +9,6 @@ export const resizeImage = async (
     height: number
 ): Promise<Buffer> => {
     const cacheKey = '${inputPath}-${widtg}-${height}';
-
     if (cache.has(cacheKey)) {
         return cache.get(cacheKey) as Buffer;
     }
