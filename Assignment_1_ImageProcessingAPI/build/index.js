@@ -11,3 +11,4 @@ app.use('/api/images', imageResizingRoute_1.default);
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+exports.default = app;
