@@ -10,3 +10,5 @@ Getting started:
 ### Note: 
 - This project convert pre-papared image in "asset/images" folder only
 - If being converted image not available or missing input params, there will heave error prompt "Error resizing and saving image"
+- Project endpoint: http://localhost:3000/api/resize
+- Sample input image parameters: http://localhost:3000/api/resize?inputPath=1.jpg&outputPath=output.jpg&width=300&height=200
