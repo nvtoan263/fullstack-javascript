@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jasmine",
     "build": "npx tsc",
-    "lint": "eslint ./src/ --ext .ts"
+    "lint": "eslint ./src/ --ext .ts",
+    "start": "node /build/src/index.js",
+    "format": "prettier --write 'src/**/*.ts'"
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +22,14 @@
     "eslint-plugin-react": "^7.33.2",
     "jasmine": "^5.1.0",
     "jasmine-spec-reporter": "^7.0.0",
-    "sharp": "^0.32.5",
+    "prettier": "^3.0.3",
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "express": "^4.17.18",
+    "sharp": "^0.32.5"
   }
 }
