@@ -46,8 +46,8 @@ resize_route.get(
 
       res.status(200).send('Image resized and saved successfully');
     } catch (error) {
-      console.error(error);
-      res.status(500).send(error.message);
+      console.error((<Error>error).message);
+      res.status(500).send((<Error>error).message);
     }
   },
 );

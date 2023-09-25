@@ -8,6 +8,12 @@ const testParams = {
     width: 300,
     height: 200    
 };
+const invalidParams = {
+    inputPath: '1.jpg',
+    outputPath: 'output-1.jpg',
+    width: -1,
+    height: 200    
+};
 const testImageFilePath = 'asset/images/output-1.jpg';
 describe ('Test End Point API', () => {
     it('call API which resize an image', async () => {
@@ -29,5 +35,17 @@ describe ('Test End Point API', () => {
         console.log("Current dir is: " + directory); 
 
         expect(fs.existsSync(testImageFilePath)).toBe(true);
+    })
+})
+
+describe ('Test parameter', () => {
+    it ('test invalid height', async () => {
+        const response = await request(app)
+        .get('/api/resize')
+        .query(invalidParams);
+    
+        expect(response.status).toBe(500);
+        expect(response.text).toBe('Width and height must be positive integers');
+        //console.log(response);
     })
 })

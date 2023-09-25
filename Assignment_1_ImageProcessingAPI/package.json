@@ -7,7 +7,7 @@
     "test": "jasmine",
     "build": "npx tsc",
     "lint": "eslint ./src/ --ext .ts",
-    "start": "node /build/src/index.js",
+    "start": "npm install; npm run build; npm run test",
     "prettier": "prettier --write 'src/**/*.ts'"
   },
   "author": "",
