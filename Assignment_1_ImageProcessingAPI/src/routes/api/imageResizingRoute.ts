@@ -1,16 +1,15 @@
 import express from 'express';
-import { saveImage } from '../controller/imageController';
+import { saveImage } from '../../controller/imageController';
 
-const router = express.Router();
+const resize_route = express.Router();
 const asset_dir = 'asset/images/';
-router.get('/resize',async (req, res) => {
+resize_route.get('/',async (req, res) => {
     const {inputPath, outputPath, width, height} = req.query as {
         inputPath: string;
         outputPath: string;
         width: string;
         height: string;
     };
-    
     try {
         const directory = process.cwd();
         console.log(directory) ;
@@ -22,4 +21,4 @@ router.get('/resize',async (req, res) => {
     }
 });
 
-export default router;
+export default resize_route;

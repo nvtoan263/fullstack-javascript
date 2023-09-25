@@ -1,10 +1,14 @@
 import express from 'express';
-import router from './routes/imageResizingRoute';
+import routes from './routes/router';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use('/api/images', router);
+app.use('/api/', routes);
+
+app.get('/', (req, res) => { 
+    res.status(200).send("This is server and is running");
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

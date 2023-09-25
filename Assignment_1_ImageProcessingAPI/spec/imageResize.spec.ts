@@ -8,14 +8,26 @@ const testParams = {
     width: 300,
     height: 200    
 };
-const testImageFilePath = '../asset/images/output.jpg';
-describe ('Test Image Resizing API', () => {
+const testImageFilePath = 'asset/images/output-1.jpg';
+describe ('Test End Point API', () => {
     it('call API which resize an image', async () => {
         const response = await request(app)
-            .get('/apt/images/resize')
+            .get('/api/')
             .query(testParams);
         
         expect(response.status).toBe(200);
+    })
+
+    it('Test API which resize an image', async () => {
+        const response = await request(app)
+            .get('/api/resize/')
+            .query(testParams);
+        
+        expect(response.status).toBe(200);
+
+        const directory = process.cwd();
+        console.log("Current dir is: " + directory); 
+
         expect(fs.existsSync(testImageFilePath)).toBe(true);
     })
 })
