@@ -8,7 +8,7 @@
     "build": "npx tsc",
     "lint": "eslint ./src/ --ext .ts",
     "start": "node /build/src/index.js",
-    "format": "prettier --write 'src/**/*.ts'"
+    "prettier": "prettier --write 'src/**/*.ts'"
   },
   "author": "",
   "license": "ISC",
