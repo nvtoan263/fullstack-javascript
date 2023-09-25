@@ -23,19 +23,6 @@ describe ('Test End Point API', () => {
         
         expect(response.status).toBe(200);
     })
-
-    it('Test API which resize an image', async () => {
-        const response = await request(app)
-            .get('/api/resize/')
-            .query(testParams);
-        
-        expect(response.status).toBe(200);
-
-        const directory = process.cwd();
-        console.log("Current dir is: " + directory); 
-
-        expect(fs.existsSync(testImageFilePath)).toBe(true);
-    })
 })
 
 describe ('Test parameter', () => {
@@ -47,5 +34,20 @@ describe ('Test parameter', () => {
         expect(response.status).toBe(500);
         expect(response.text).toBe('Width and height must be positive integers');
         //console.log(response);
+    })
+})
+
+describe ('Test Image processing', () => {
+    it('Test API which resize an image', async () => {
+        const response = await request(app)
+            .get('/api/resize/')
+            .query(testParams);
+        
+        expect(response.status).toBe(200);
+
+        const directory = process.cwd();
+        console.log("Current dir is: " + directory); 
+
+        expect(fs.existsSync(testImageFilePath)).toBe(true);
     })
 })
