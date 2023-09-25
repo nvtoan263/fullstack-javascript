@@ -3,7 +3,7 @@ import { saveImage } from '../../controller/imageController';
 
 const resize_route = express.Router();
 const asset_dir = 'asset/images/';
-resize_route.get('/',async (req, res) => {
+resize_route.get('/',async (req: express.Request, res: express.Response): Promise<void> => {
     const {inputPath, outputPath, width, height} = req.query as {
         inputPath: string;
         outputPath: string;

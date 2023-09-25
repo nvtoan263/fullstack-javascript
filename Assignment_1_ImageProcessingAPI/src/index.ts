@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 app.use('/api/', routes);
 
-app.get('/', (req, res) => { 
+app.get('/', (req: express.Request, res: express.Response): void => { 
     res.status(200).send("This is server and is running");
 });
 
