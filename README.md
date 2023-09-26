@@ -3,6 +3,7 @@
 ## Project 1. Image Resize processing
 Getting started:
 - Change directory to /Assignment_1_ImageProcessingAPI
+- run "npm run start" to install necessary packages and start application
 - run "npm install" to install neccessary packages
 - run "npm run build" to build project
 - run "npm run lint" to check source code grammer
