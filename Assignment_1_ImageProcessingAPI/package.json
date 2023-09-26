@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jasmine",
     "build": "npx tsc",
-    "lint": "eslint ./src/ --ext .ts",
+    "lint": "eslint . --ext .ts",
     "start": "npm install; npm run build; node /buil/src/index.js",
     "prettier": "prettier --write 'src/**/*.ts'"
   },
