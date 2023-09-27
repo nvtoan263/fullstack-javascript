@@ -35,6 +35,14 @@ describe ('Test parameter', () => {
         expect(response.text).toBe('Width and height must be positive integers');
         //console.log(response);
     })
+    it ('Produce a failure test case ', async () => {
+        const response = await request(app)
+        .get('/api/resize')
+        .query(invalidParams);
+    
+        expect(response.status).toBe(200);
+        //console.log(response);
+    })
 })
 
 describe ('Test Image processing', () => {
